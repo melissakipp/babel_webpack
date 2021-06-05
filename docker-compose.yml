@@ -6,6 +6,6 @@ services:
     build: .
     user: node
     ports:
-      - 3000:3000
+      - 8080:8080
     volumes:
-      - .:/usr/src/app
+      - .:/usr/src/babel_webpack_starter

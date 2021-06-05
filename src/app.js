@@ -9,6 +9,10 @@ const getData = async (url) => {
 
 getData('https://jsonplaceholder.typicode.com/posts');
 
+
+
+
+
 // Bret Fisher: Docker for Node.js course Video 25
 // quit on ctrl-c when running docker in terminal
 process.on("SIGINT", function onSigint() {
