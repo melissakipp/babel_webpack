@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  modernjs:
+    image: modernjs
+    build: .
+    user: node
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
