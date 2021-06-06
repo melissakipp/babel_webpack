@@ -1,4 +1,4 @@
-version: "3.4"
+version: "2.7"
 
 services:
   modernjs:
@@ -9,3 +9,10 @@ services:
       - 8080:8080
     volumes:
       - .:/usr/src/babel_webpack_starter
+  json-server:
+    image: vimagick/json-server
+    command: -H 0.0.0.0 -p 3000 -w /api/db.json
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./api:/api
