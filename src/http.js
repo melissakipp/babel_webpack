@@ -2,54 +2,63 @@
  * EasyHTTP Library
  * Library for making HTTP requests
  *
- * @version 2.0.0
- * @author Brad Traversy
+ * @version 3.0.0
+ * @author  Brad Traversy
  * @license MIT
  *
-**/
+ **/
 
 class EasyHTTP {
-  // Make an HTTP GET Request
+  // Make an HTTP GET Request 
   async get(url) {
     const response = await fetch(url);
     const resData = await response.json();
-    return resData
+    return resData;
   }
-  // Make a HTTP POST Request
+
+  // Make an HTTP POST Request
   async post(url, data) {
     const response = await fetch(url, {
       method: 'POST',
-      header: {
+      headers: {
         'Content-type': 'application/json'
       },
       body: JSON.stringify(data)
     });
+
     const resData = await response.json();
-    return resData
+    return resData;
+
   }
-  // Make a HTTP PUT Request
+
+  // Make an HTTP PUT Request
   async put(url, data) {
     const response = await fetch(url, {
       method: 'PUT',
-      header: {
+      headers: {
         'Content-type': 'application/json'
       },
       body: JSON.stringify(data)
-    })
+    });
+
     const resData = await response.json();
-    return resData
+    return resData;
   }
-  // Make a HTTP DELETE Request
+
+  // Make an HTTP DELETE Request
   async delete(url) {
     const response = await fetch(url, {
       method: 'DELETE',
-      header: {
+      headers: {
         'Content-type': 'application/json'
       }
     });
+
     const resData = await 'Resource Deleted...';
-    return resData
+    return resData;
   }
+
 }
 
 export const http = new EasyHTTP();
+
