@@ -1,13 +1,28 @@
-const greeting = 'Hello World';
-console.log(greeting);
+import { http } from './http';
 
-const getData = async (url) => {
-  const response = await fetch(url);
-  const result = await response.json();
-  console.log(result);
-};
+// Get posts on DOM load
+document.addEventListener('DOMContentLoad', getPosts);
 
-getData('https://jsonplaceholder.typicode.com/posts');
+function getPosts() {
+  http.get('http://localhost:3000/posts');
+}
+
+
+
+
+
+
+
+// const greeting = 'Hello World, from melissakipp';
+// console.log(greeting);
+
+// const getData = async (url) => {
+//   const response = await fetch(url);
+//   const result = await response.json();
+//   console.log(result);
+// };
+
+// getData('https://jsonplaceholder.typicode.com/posts');
 
 
 
