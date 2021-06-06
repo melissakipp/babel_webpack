@@ -19,7 +19,7 @@ $ docker compose run modernjs npm install
 To serve in the browser  - Runs webpack-dev-server
 
 ```sh
-$ docker-compose up
+$ docker compose up
 ```
 
 App running on http://localhost:8080
