@@ -4,7 +4,7 @@ import { http } from './http';
 import { ui } from './ui';
 
 // Get posts on DOM load
-document.addEventListener('DOMContentLoad', getPosts);
+document.addEventListener('DOMContentLoaded', getPosts);
 
 function getPosts() {
   http.get('http://localhost:3000/posts')
@@ -17,9 +17,6 @@ function getPosts() {
 
 
 
-
-// const greeting = 'Hello World, from melissakipp';
-// console.log(greeting);
 
 // const getData = async (url) => {
 //   const response = await fetch(url);
